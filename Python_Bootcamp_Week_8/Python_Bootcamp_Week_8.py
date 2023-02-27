@@ -18,11 +18,9 @@ def RunMenu(menuList):
             menuChoice = int(input("\nPlease make a selection from the list provided:\n")) #Requests the user enter an int - then saves it into the variable assignment
 
             if menuChoice > len(menuList) - 1 or menuChoice < 1:
-                raise MenuOutOfRange
+                raise MenuOutOfRange #Raises the custom exception if the IF statement validates as TRUE
 
-            return menuChoice #Returns the user's input
-
-        except MenuOutOfRange:
+        except MenuOutOfRange: #Triggers when the user enters a value outside of the list range provided
 
             print("\n\nError! PLease only enter a number from the list indicated, please try again...")
             input("[Press Enter to Try Again]\n\n")
@@ -37,6 +35,10 @@ def RunMenu(menuList):
             print("\n\nError! An unknown bug as occurred, please try again...")
             input("[Press Enter to Try Again]\n\n")
 
+        else: #Triggers only when no exception has been raised!
+
+            continueLoop = False
+            return menuChoice #Returns the user's input
         
 
 continueLoop = True #Sets my loop condition variable to True
