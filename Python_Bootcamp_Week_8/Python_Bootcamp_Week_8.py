@@ -100,9 +100,19 @@ def RegStudents(myStudents): #This section will be used to add new student to th
 
                 else:
 
-                    myStudents.append(Students(inputDetails[0], inputDetails[1], inputDetails[2]))
-                    ageLoop = False
+                    print("\n\n-----------------------------------------------------")
+                    print("\nFirst Name: " + inputDetails[0] + "\nSecond Name: " + inputDetails[1] + "\nAge: " + str(inputDetails[2]))
 
+                    menuList = ["\nAre you happy with these details?\n", "Yes" , "No"]
+                    menuChoice = RunMenu(menuList)
+
+                    if menuChoice == 1:
+                        ageLoop = False
+                        print("\n\nNew Student Added!")
+                        input("[Press Enter to Continue]\n\n")
+                        myStudents.append(Students(inputDetails[0], inputDetails[1], inputDetails[2]))
+                    elif menuChoice == 2:
+                        ageLoop = False
 
         elif menuChoice == 2:
             continueLoop = False
