@@ -6,7 +6,7 @@ def RunMenu(menuList):
     for x in range(1, len(menuList)): #Loops from 1 (because be have used index 0 already), until the end of the indexes in our passed list
         print(x + ": " + menuList[x]) #Prints out a formatted text screen, using the text passed up to the function inside the list, using x as the index counter
 
-    menuChoice = input("\nPlease make a selection from the list provided:\n") #Requests the user enter an int - then saves it into the variable assignment
+    menuChoice = int(input("\nPlease make a selection from the list provided:\n")) #Requests the user enter an int - then saves it into the variable assignment
 
     return menuChoice #Returns the user's input
 
