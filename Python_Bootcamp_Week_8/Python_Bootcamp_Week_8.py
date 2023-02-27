@@ -55,7 +55,7 @@ def RunMenu(menuList):
             continueLoop = False
             return menuChoice #Returns the user's input
         
-def RegStudents(myStudents):
+def RegStudents(myStudents): #This section will be used to add new student to the myStudents List
 
     continueLoop = True
     while continueLoop == True:
@@ -63,7 +63,7 @@ def RegStudents(myStudents):
         menuList = ["------------Register New Student Menu------------\n\n", "Add New Student", "Exit"]
         menuChoice = RunMenu(menuList)
 
-        inputDetails = list()
+        inputDetails = list() #This is a temp list to store input values for validation - before the data is placed in side of our object list
 
         if menuChoice == 1:
 
@@ -71,7 +71,7 @@ def RegStudents(myStudents):
             inputDetails.append(input("\n\nPlease enter the students seocond name:\n"))
 
             ageLoop = True
-            while ageLoop == True:
+            while ageLoop == True: #This will loop to ensure the user enters the correct age - without forcing them to re-enter all the details
 
                 try:
 
