@@ -84,16 +84,19 @@ def RegStudents(myStudents): #This section will be used to add new student to th
 
                     print("\n\nPlease only enter in a whole number...")
                     input("[Press Enter to Try Again]")
+                    inputDetails.pop()
 
                 except ValueOutOfRange:
 
                     print("\n\nStudents must be 16 or older, and no older than 120...")
                     input("[Press Enter to Try Again]")
+                    inputDetails.pop()
 
                 except:
 
                     print("\n\nUnknown error has occured, please try again...")
                     input("[Press Enter to Try Again]")
+                    inputDetails.pop()
 
                 else:
 
@@ -102,7 +105,7 @@ def RegStudents(myStudents): #This section will be used to add new student to th
 
 
         elif menuChoice == 2:
-            print("") #Remove this later, once we have included a loop
+            continueLoop = False
 
 #-----------------------------Main Code Here------------------------------------------------
 
