@@ -1,3 +1,7 @@
+class MenuOutOfRange(Exception):
+    #This class is for triggering a custom exception
+    pass
+
 def RunMenu(menuList):
 
     continueLoop = True
@@ -13,11 +17,19 @@ def RunMenu(menuList):
 
             menuChoice = int(input("\nPlease make a selection from the list provided:\n")) #Requests the user enter an int - then saves it into the variable assignment
 
+            if menuChoice > len(menuList) - 1 or menuChoice < 1:
+                raise MenuOutOfRange
+
             return menuChoice #Returns the user's input
+
+        except MenuOutOfRange:
+
+            print("\n\nError! PLease only enter a number from the list indicated, please try again...")
+            input("[Press Enter to Try Again]\n\n")
 
         except ValueError: #Triggers when the user enters a non-integer value
 
-            print("\n\nError! PLease only enter valid whole numbers, please try again...")
+            print("\n\nError! PLease only enter a valid whole number, please try again...")
             input("[Press Enter to Try Again]\n\n")
 
         except: #Triggers exception - no specific condition required.
