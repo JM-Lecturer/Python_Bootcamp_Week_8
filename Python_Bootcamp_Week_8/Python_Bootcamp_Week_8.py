@@ -15,6 +15,11 @@ def RunMenu(menuList):
 
             return menuChoice #Returns the user's input
 
+        except ValueError: #Triggers when the user enters a non-integer value
+
+            print("\n\nError! PLease only enter valid whole numbers, please try again...")
+            input("[Press Enter to Try Again]\n\n")
+
         except: #Triggers exception - no specific condition required.
 
             print("\n\nError! An unknown bug as occurred, please try again...")
