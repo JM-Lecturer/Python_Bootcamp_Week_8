@@ -2,6 +2,20 @@ class MenuOutOfRange(Exception):
     #This class is for triggering a custom exception
     pass
 
+class Students():
+
+    firstName = ""
+    secondName = ""
+    age = 0
+    className = ""
+    Attendance = False
+
+    def __init__(self, firstName, secondName, age):
+
+        self.firstName = firstName
+        self.secondName = secondName
+        self.age = age
+
 def RunMenu(menuList):
 
     continueLoop = True
@@ -40,6 +54,7 @@ def RunMenu(menuList):
             continueLoop = False
             return menuChoice #Returns the user's input
         
+#-----------------------------Main Code Here------------------------------------------------
 
 continueLoop = True #Sets my loop condition variable to True
 while continueLoop == True: #Will loop this section of code until the variable condition is changed to false
