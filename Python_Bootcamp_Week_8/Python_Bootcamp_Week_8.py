@@ -1,4 +1,4 @@
-class MenuOutOfRange(Exception):
+class ValueOutOfRange(Exception):
     #This class is for triggering a custom exception
     pass
 
@@ -33,9 +33,9 @@ def RunMenu(menuList):
             menuChoice = int(input("\nPlease make a selection from the list provided:\n")) #Requests the user enter an int - then saves it into the variable assignment
 
             if menuChoice > len(menuList) - 1 or menuChoice < 1:
-                raise MenuOutOfRange #Raises the custom exception if the IF statement validates as TRUE
+                raise ValueOutOfRange #Raises the custom exception if the IF statement validates as TRUE
 
-        except MenuOutOfRange: #Triggers when the user enters a value outside of the list range provided
+        except ValueOutOfRange: #Triggers when the user enters a value outside of the list range provided
 
             print("\n\nError! PLease only enter a number from the list indicated, please try again...")
             input("[Press Enter to Try Again]\n\n")
@@ -55,8 +55,58 @@ def RunMenu(menuList):
             continueLoop = False
             return menuChoice #Returns the user's input
         
+def RegStudents(myStudents):
+
+    continueLoop = True
+    while continueLoop == True:
+    
+        menuList = ["------------Register New Student Menu------------\n\n", "Add New Student", "Exit"]
+        menuChoice = RunMenu(menuList)
+
+        inputDetails = list()
+
+        if menuChoice == 1:
+
+            inputDetails.append(input("\n\nPlease enter the students first name:\n"))
+            inputDetails.append(input("\n\nPlease enter the students seocond name:\n"))
+
+            ageLoop = True
+            while ageLoop == True:
+
+                try:
+
+                    inputDetails.append(int(input("\n\nPlease enter the students age:\n")))
+
+                    if inputDetails[2] < 16 or inputDetails[2] > 120:
+                        raise ValueOutOfRange
+
+                except ValueError:
+
+                    print("\n\nPlease only enter in a whole number...")
+                    input("[Press Enter to Try Again]")
+
+                except ValueOutOfRange:
+
+                    print("\n\nStudents must be 16 or older, and no older than 120...")
+                    input("[Press Enter to Try Again]")
+
+                except:
+
+                    print("\n\nUnknown error has occured, please try again...")
+                    input("[Press Enter to Try Again]")
+
+                else:
+
+                    myStudents.append(Students(inputDetails[0], inputDetails[1], inputDetails[2]))
+                    ageLoop = False
+
+
+        elif menuChoice == 2:
+            print("") #Remove this later, once we have included a loop
+
 #-----------------------------Main Code Here------------------------------------------------
 
+myStudents = list()
 continueLoop = True #Sets my loop condition variable to True
 while continueLoop == True: #Will loop this section of code until the variable condition is changed to false
 
@@ -68,7 +118,7 @@ while continueLoop == True: #Will loop this section of code until the variable c
 
     #This will be the If statement used to make a selection based on what the user has input in the menu function
     if menuChoice == 1:
-        print("Register Students coming soon...")
+        RegStudents(myStudents)
     elif menuChoice == 2:
         print("Assign students coming soon...")
     elif menuChoice == 3:
