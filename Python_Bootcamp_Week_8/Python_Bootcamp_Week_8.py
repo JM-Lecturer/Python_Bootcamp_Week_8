@@ -126,10 +126,28 @@ def RegStudents(myStudents): #This section will be used to add new student to th
         elif menuChoice == 2:
             continueLoop = False
 
+def AssignStudents(myStudents, myClasses):
+
+    DisplayAllStudents(myStudents)
+
+    print("\n------------Assign Students------------\n\n")
+
+    menuList = ["Which student would you like to assign to a class?\n"]
+    for x in range(0, len(myStudents)):
+        menuList.append(myStudents[x].firstName + " " + myStudents[x].secondName)
+    menuList.append("Return to Menu")
+
+    RunMenu(menuList)
+
+    input("TEMP[]")
+
+
 #-----------------------------Main Code Here------------------------------------------------
 
 # myStudents = list() ---Replace next line with this code, when project complete
 myStudents = [Students("Jay", "Miles", 29), Students("Jon", "Barnett", 30), Students("Ben", "Hobbs", 28), Students("Sean", "Shearing", 32), Students("Will", "Price", 31)]
+myClasses = ["Programming", "Maths", "English", "Science", "History"]
+
 continueLoop = True #Sets my loop condition variable to True
 while continueLoop == True: #Will loop this section of code until the variable condition is changed to false
 
@@ -143,7 +161,7 @@ while continueLoop == True: #Will loop this section of code until the variable c
     if menuChoice == 1:
         RegStudents(myStudents)
     elif menuChoice == 2:
-        print("Assign students coming soon...")
+        AssignStudents(myStudents, myClasses)
     elif menuChoice == 3:
         print("Take Register coming soon...")
     else:
