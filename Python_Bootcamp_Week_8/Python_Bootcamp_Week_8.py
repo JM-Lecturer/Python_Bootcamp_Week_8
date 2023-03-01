@@ -54,13 +54,22 @@ def RunMenu(menuList):
 
             continueLoop = False
             return menuChoice #Returns the user's input
+
+def DisplayAllStudents(myStudents): #Function to display off students currently logged in the system
+    
+    for x in range(0, len(myStudents)):
+
+        print("\nName: " + myStudents[x].firstName + " " + myStudents[x].secondName)
+        print("Age: " + str(myStudents[x].age))
         
 def RegStudents(myStudents): #This section will be used to add new student to the myStudents List
 
     continueLoop = True
     while continueLoop == True:
     
-        menuList = ["------------Register New Student Menu------------\n\n", "Add New Student", "Exit"]
+        DisplayAllStudents(myStudents)
+
+        menuList = ["\n------------Register New Student Menu------------\n\n", "Add New Student", "Exit"]
         menuChoice = RunMenu(menuList)
 
         inputDetails = list() #This is a temp list to store input values for validation - before the data is placed in side of our object list
@@ -119,7 +128,8 @@ def RegStudents(myStudents): #This section will be used to add new student to th
 
 #-----------------------------Main Code Here------------------------------------------------
 
-myStudents = list()
+# myStudents = list() ---Replace next line with this code, when project complete
+myStudents = [Students("Jay", "Miles", 29), Students("Jon", "Barnett", 30), Students("Ben", "Hobbs", 28), Students("Sean", "Shearing", 32), Students("Will", "Price", 31)]
 continueLoop = True #Sets my loop condition variable to True
 while continueLoop == True: #Will loop this section of code until the variable condition is changed to false
 
