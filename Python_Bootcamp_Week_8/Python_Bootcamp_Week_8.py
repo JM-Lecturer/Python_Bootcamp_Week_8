@@ -128,18 +128,22 @@ def RegStudents(myStudents): #This section will be used to add new student to th
 
 def AssignStudents(myStudents, myClasses):
 
-    DisplayAllStudents(myStudents)
+    continueLoop = True
+    while continueLoop == True:
+    
+        DisplayAllStudents(myStudents)
 
-    print("\n------------Assign Students------------\n\n")
+        print("\n------------Assign Students------------\n\n")
 
-    menuList = ["Which student would you like to assign to a class?\n"]
-    for x in range(0, len(myStudents)):
-        menuList.append(myStudents[x].firstName + " " + myStudents[x].secondName)
-    menuList.append("Return to Menu")
+        menuList = ["Which student would you like to assign to a class?\n"]
+        for x in range(0, len(myStudents)):
+            menuList.append(myStudents[x].firstName + " " + myStudents[x].secondName)
+        menuList.append("Return to Menu")
 
-    RunMenu(menuList)
+        menuChoice = RunMenu(menuList)
 
-    input("TEMP[]")
+        if menuChoice == len(menuList) - 1:
+            continueLoop = False
 
 
 #-----------------------------Main Code Here------------------------------------------------
