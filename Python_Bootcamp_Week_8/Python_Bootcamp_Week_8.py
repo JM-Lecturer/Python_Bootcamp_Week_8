@@ -8,7 +8,6 @@ class Students(): #Class template for student objects
     firstName = ""
     secondName = ""
     age = 0
-    className = ""
     Attendance = False
 
     def __init__(self, firstName, secondName, age): #Constructor used to initialize our student objects
@@ -20,6 +19,16 @@ class Students(): #Class template for student objects
     def GetName(self): #Member function, simply returns a concat string of the students name
 
         return self.firstName + " " + self.secondName
+
+class Classes():
+    
+    className = ""
+    classStudents = list()
+
+    def __init__(self, className):
+
+        self.className = className
+
 
 def RunMenu(menuList):
 
