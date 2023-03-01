@@ -140,10 +140,23 @@ def AssignStudents(myStudents, myClasses):
             menuList.append(myStudents[x].firstName + " " + myStudents[x].secondName)
         menuList.append("Return to Menu")
 
-        menuChoice = RunMenu(menuList)
+        studentChoice = RunMenu(menuList)
 
-        if menuChoice == len(menuList) - 1:
+        if studentChoice == len(menuList) - 1:
             continueLoop = False
+        else:
+
+            classLoop = True
+            while classLoop == True:
+
+                menuList = ["\n\nWhich class wouild you like to assign " + myStudents[studentChoice - 1].firstName + " " + myStudents[studentChoice - 1].secondName + " to:\n"]
+                for x in range(0, len(myClasses)):
+                    menuList.append(myClasses[x])
+                menuList.append("Return")
+
+                classChoice = RunMenu(menuList)
+
+            #myStudents[menuChoice - 1].className = "sdasf"
 
 
 #-----------------------------Main Code Here------------------------------------------------
