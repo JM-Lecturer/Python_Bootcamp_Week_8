@@ -156,7 +156,17 @@ def AssignStudents(myStudents, myClasses):
 
                 classChoice = RunMenu(menuList)
 
-            #myStudents[menuChoice - 1].className = "sdasf"
+                if classChoice == len(menuList) - 1:
+
+                    classLoop = False
+
+                else:
+
+                    classLoop = False
+                    myStudents[studentChoice - 1].className = myClasses[classChoice - 1]
+                    print("\n\nYou have successfully added " + myStudents[studentChoice - 1].firstName + " " + myStudents[studentChoice - 1].secondName + " to the " + myStudents[studentChoice - 1].className + " class!")
+                    input("[Press Enter to Continue]")
+
 
 
 #-----------------------------Main Code Here------------------------------------------------
