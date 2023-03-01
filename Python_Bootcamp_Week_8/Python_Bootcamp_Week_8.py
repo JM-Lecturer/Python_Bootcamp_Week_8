@@ -17,6 +17,10 @@ class Students(): #Class template for student objects
         self.secondName = secondName
         self.age = age
 
+    def GetName(self): #Member function, simply returns a concat string of the students name
+
+        return self.firstName + " " + self.secondName
+
 def RunMenu(menuList):
 
     continueLoop = True
@@ -149,7 +153,7 @@ def AssignStudents(myStudents, myClasses):
             classLoop = True
             while classLoop == True:
 
-                menuList = ["\n\nWhich class wouild you like to assign " + myStudents[studentChoice - 1].firstName + " " + myStudents[studentChoice - 1].secondName + " to:\n"]
+                menuList = ["\n\nWhich class wouild you like to assign " + myStudents[studentChoice - 1].GetName() + " to:\n"]
                 for x in range(0, len(myClasses)):
                     menuList.append(myClasses[x])
                 menuList.append("Return")
@@ -164,7 +168,7 @@ def AssignStudents(myStudents, myClasses):
 
                     classLoop = False
                     myStudents[studentChoice - 1].className = myClasses[classChoice - 1]
-                    print("\n\nYou have successfully added " + myStudents[studentChoice - 1].firstName + " " + myStudents[studentChoice - 1].secondName + " to the " + myStudents[studentChoice - 1].className + " class!")
+                    print("\n\nYou have successfully added " + myStudents[studentChoice - 1].GetName() + " to the " + myStudents[studentChoice - 1].className + " class!")
                     input("[Press Enter to Continue]")
 
 
