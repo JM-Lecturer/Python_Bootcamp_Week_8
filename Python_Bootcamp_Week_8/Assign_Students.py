@@ -1,9 +1,11 @@
+import Generic_Functions as Fun
+
 def AssignStudents(myStudents, myClasses):
 
     continueLoop = True
     while continueLoop == True:
     
-        DisplayAllStudents(myStudents)
+        Fun.DisplayAllStudents(myStudents)
 
         print("\n------------Assign Students------------\n\n")
 
@@ -12,7 +14,7 @@ def AssignStudents(myStudents, myClasses):
             menuList.append(myStudents[x].firstName + " " + myStudents[x].secondName)
         menuList.append("Return to Menu")
 
-        studentChoice = RunMenu(menuList)
+        studentChoice = Fun.RunMenu(menuList)
 
         if studentChoice == len(menuList) - 1:
             continueLoop = False
@@ -26,7 +28,7 @@ def AssignStudents(myStudents, myClasses):
                     menuList.append(myClasses[x])
                 menuList.append("Return")
 
-                classChoice = RunMenu(menuList)
+                classChoice = Fun.RunMenu(menuList)
 
                 if classChoice == len(menuList) - 1:
 

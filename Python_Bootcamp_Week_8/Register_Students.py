@@ -1,12 +1,15 @@
+import Generic_Functions as Fun
+from Register_Classes import (Students, ValueOutOfRange)
+
 def RegStudents(myStudents): #This section will be used to add new student to the myStudents List
 
     continueLoop = True
     while continueLoop == True:
     
-        DisplayAllStudents(myStudents)
+        Fun.DisplayAllStudents(myStudents)
 
         menuList = ["\n------------Register New Student Menu------------\n\n", "Add New Student", "Exit"]
-        menuChoice = RunMenu(menuList)
+        menuChoice = Fun.RunMenu(menuList)
 
         inputDetails = list() #This is a temp list to store input values for validation - before the data is placed in side of our object list
 
@@ -49,7 +52,7 @@ def RegStudents(myStudents): #This section will be used to add new student to th
                     print("\nFirst Name: " + inputDetails[0] + "\nSecond Name: " + inputDetails[1] + "\nAge: " + str(inputDetails[2]))
 
                     menuList = ["\nAre you happy with these details?\n", "Yes" , "No"]
-                    menuChoice = RunMenu(menuList)
+                    menuChoice = Fun.RunMenu(menuList)
 
                     if menuChoice == 1:
                         ageLoop = False
