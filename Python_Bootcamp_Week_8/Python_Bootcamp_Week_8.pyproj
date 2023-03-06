@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Generic_Functions.py" />
     <Compile Include="Python_Bootcamp_Week_8.py" />
     <Compile Include="Register_Classes.py" />
   </ItemGroup>
