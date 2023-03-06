@@ -37,3 +37,10 @@ def RunMenu(menuList):
 
             continueLoop = False
             return menuChoice #Returns the user's input
+
+def DisplayAllStudents(myStudents): #Function to display off students currently logged in the system
+    
+    for x in range(0, len(myStudents)):
+
+        print("\nName: " + myStudents[x].firstName + " " + myStudents[x].secondName)
+        print("Age: " + str(myStudents[x].age))
