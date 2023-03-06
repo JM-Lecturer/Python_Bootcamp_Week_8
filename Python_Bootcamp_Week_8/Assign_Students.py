@@ -25,7 +25,7 @@ def AssignStudents(myStudents, myClasses):
 
                 menuList = ["\n\nWhich class wouild you like to assign " + myStudents[studentChoice - 1].GetName() + " to:\n"]
                 for x in range(0, len(myClasses)):
-                    menuList.append(myClasses[x])
+                    menuList.append(myClasses[x].className)
                 menuList.append("Return")
 
                 classChoice = Fun.RunMenu(menuList)
@@ -37,6 +37,9 @@ def AssignStudents(myStudents, myClasses):
                 else:
 
                     classLoop = False
-                    myStudents[studentChoice - 1].className = myClasses[classChoice - 1]
-                    print("\n\nYou have successfully added " + myStudents[studentChoice - 1].GetName() + " to the " + myStudents[studentChoice - 1].className + " class!")
+                    
+                    myClasses[classChoice - 1].classStudents.append(myStudents[studentChoice - 1])
+                    del myStudents[studentChoice - 1]
+
+                    print("\n\nYou have successfully added " + myClasses[classChoice - 1].classStudents[len(myClasses[classChoice - 1].classStudents) - 1].GetName() + " to the " + myClasses[classChoice - 1].className + " class!")
                     input("[Press Enter to Continue]")

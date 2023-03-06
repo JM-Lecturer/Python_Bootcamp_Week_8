@@ -20,7 +20,7 @@ class Students(): #Class template for student objects
 
         return self.firstName + " " + self.secondName
 
-class Classes():
+class Subjects():
     
     className = ""
     classStudents = list()

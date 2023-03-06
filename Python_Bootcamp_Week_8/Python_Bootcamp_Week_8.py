@@ -1,19 +1,19 @@
-from Register_Classes import (Students,Classes)
+from Register_Classes import (Students,Subjects)
 from Generic_Functions import RunMenu
 import Register_Students as Reg, Assign_Students as Agn
 
 def Main():
     # myStudents = list() ---Replace next line with this code, when project complete
     myStudents = [Students("Jay", "Miles", 29), Students("Jon", "Barnett", 30), Students("Ben", "Hobbs", 28), Students("Sean", "Shearing", 32), Students("Will", "Price", 31)]
-    myClasses = [Classes("Programming"), Classes("Maths"), Classes("English"), Classes("Science"), Classes("History")]
+    myClasses = [Subjects("Programming"), Subjects("Maths"), Subjects("English"), Subjects("Science"), Subjects("History")]
     
     #Delete THIS WHEN FINISHED teaching---------------------------------------------------------
 
-    myClasses[0].classStudents.append(myStudents[0])
-    del myStudents[0]
-    print(myClasses[0].classStudents[0].GetName())
+    #myClasses[0].classStudents.append(myStudents[0])
+    #del myStudents[0]
+    #print(myClasses[0].classStudents[0].GetName())
 
-    input("[STOP HERE]")
+    #input("[STOP HERE]")
 
     #Delete THIS WHEN FINISHED teaching---------------------------------------------------------
 
