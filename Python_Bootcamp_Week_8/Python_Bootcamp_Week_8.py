@@ -1,4 +1,6 @@
-import Register_Classes as Cls, Generic_Functions
+from Register_Classes import (Students,Classes)
+from Generic_Functions import RunMenu
+import Register_Students as Reg, Assign_Students as Agn
 
 def Main():
     # myStudents = list() ---Replace next line with this code, when project complete
@@ -28,9 +30,9 @@ def Main():
 
         #This will be the If statement used to make a selection based on what the user has input in the menu function
         if menuChoice == 1:
-            RegStudents(myStudents)
+            Reg.RegStudents(myStudents)
         elif menuChoice == 2:
-            AssignStudents(myStudents, myClasses)
+            Agn.AssignStudents(myStudents, myClasses)
         elif menuChoice == 3:
             print("Take Register coming soon...")
         else:
