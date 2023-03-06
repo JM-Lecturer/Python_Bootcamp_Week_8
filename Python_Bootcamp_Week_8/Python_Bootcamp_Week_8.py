@@ -186,7 +186,19 @@ def AssignStudents(myStudents, myClasses):
 
 # myStudents = list() ---Replace next line with this code, when project complete
 myStudents = [Students("Jay", "Miles", 29), Students("Jon", "Barnett", 30), Students("Ben", "Hobbs", 28), Students("Sean", "Shearing", 32), Students("Will", "Price", 31)]
-myClasses = ["Programming", "Maths", "English", "Science", "History"]
+myClasses = [Classes("Programming"), Classes("Maths"), Classes("English"), Classes("Science"), Classes("History")]
+
+
+
+#Delete THIS WHEN FINISHED teaching---------------------------------------------------------
+
+myClasses[0].classStudents.append(myStudents[0])
+del myStudents[0]
+print(myClasses[0].classStudents[0].GetName())
+
+input("[STOP HERE]")
+
+#Delete THIS WHEN FINISHED teaching---------------------------------------------------------
 
 continueLoop = True #Sets my loop condition variable to True
 while continueLoop == True: #Will loop this section of code until the variable condition is changed to false
