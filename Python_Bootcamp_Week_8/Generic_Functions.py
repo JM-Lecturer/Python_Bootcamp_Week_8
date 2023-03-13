@@ -40,7 +40,25 @@ def RunMenu(menuList):
 
 def DisplayAllStudents(myStudents): #Function to display off students currently logged in the system
     
+    print("\n-----------Unassigned Students-----------\n\n")
+
     for x in range(0, len(myStudents)):
 
         print("\nName: " + myStudents[x].firstName + " " + myStudents[x].secondName)
         print("Age: " + str(myStudents[x].age))
+
+def DisplayStudentsBySubject(myClasses, SubjectIndex):
+
+    if len(myClasses[SubjectIndex].classStudents) == 0:
+
+        print("\n-----------" + myClasses[SubjectIndex].className + "-----------\n\n")
+        print("There are currently no Students assigned to this subject...\n")
+
+    else:
+
+        print("\n-----------" + myClasses[SubjectIndex].className + "-----------\n\n")
+
+        for x in range(0, len(myClasses[SubjectIndex].classStudents)):
+
+            print("\nName: " + myClasses[SubjectIndex].classStudents[x].GetName())
+            print("Age: " + str(myClasses[SubjectIndex].classStudents[x].age))
