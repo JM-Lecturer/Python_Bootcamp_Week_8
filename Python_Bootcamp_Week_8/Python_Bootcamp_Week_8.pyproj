@@ -24,6 +24,7 @@
     <Compile Include="Assign_Students.py" />
     <Compile Include="Attendance.py" />
     <Compile Include="Generic_Functions.py" />
+    <Compile Include="IO_Functions.py" />
     <Compile Include="Python_Bootcamp_Week_8.py" />
     <Compile Include="Register_Classes.py" />
     <Compile Include="Register_Students.py" />
