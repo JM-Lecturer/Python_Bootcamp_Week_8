@@ -7,6 +7,22 @@ def Main():
     myStudents = [Students("Jay", "Miles", 29), Students("Jon", "Barnett", 30), Students("Ben", "Hobbs", 28), Students("Sean", "Shearing", 32), Students("Will", "Price", 31)]
     myClasses = [Subjects("Programming"), Subjects("Maths"), Subjects("English"), Subjects("Science"), Subjects("History")]
 
+    myClasses[0].classStudents.append(Students("Greg","Smith", 19))
+    myClasses[0].classStudents.append(Students("Jane","Jameson", 21))
+    myClasses[0].classStudents.append(Students("Alice","Parker", 32))
+    myClasses[0].classStudents.append(Students("Meg","Kent", 22))
+    myClasses[0].classStudents.append(Students("Bob","Martinson", 18))
+    myClasses[0].classStudents.append(Students("Frank","Wallace", 23))
+    
+    myClasses[1].classStudents.append(Students("Mike","Duke", 19))
+    myClasses[1].classStudents.append(Students("Ben","Vik", 21))
+    myClasses[1].classStudents.append(Students("Derek","Pop", 32))
+    myClasses[1].classStudents.append(Students("Sophie","Yasmar", 22))
+    myClasses[1].classStudents.append(Students("Alicia","Gundarson", 18))
+    myClasses[1].classStudents.append(Students("Mandy","Reiksmen", 23))
+
+    #-------------------------------------------------------------------------------------------------------------------------------
+
     continueLoop = True #Sets my loop condition variable to True
     while continueLoop == True: #Will loop this section of code until the variable condition is changed to false
 

@@ -62,3 +62,14 @@ def DisplayStudentsBySubject(myClasses, SubjectIndex):
 
             print("\nName: " + myClasses[SubjectIndex].classStudents[x].GetName())
             print("Age: " + str(myClasses[SubjectIndex].classStudents[x].age))
+
+def StudentSelectionMenu(myStudents, titleMsg, listMsg):
+
+    print("\n" + titleMsg + "\n\n")
+
+    menuList = [listMsg + "\n"]
+    for x in range(0, len(myStudents)):
+        menuList.append(myStudents[x].firstName + " " + myStudents[x].secondName)
+    menuList.append("Return to Menu")
+
+    return RunMenu(menuList)

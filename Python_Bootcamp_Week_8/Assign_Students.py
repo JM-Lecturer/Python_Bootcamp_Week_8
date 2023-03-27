@@ -26,16 +26,9 @@ def AssignStudents(myStudents, myClasses):
             Fun.DisplayStudentsBySubject(myClasses, subjectChoice)
             Fun.DisplayAllStudents(myStudents)
 
-            print("\n------------Assign Students------------\n\n")
-
-            menuList = ["Which student would you like to assign to a class?\n"]
-            for x in range(0, len(myStudents)):
-                menuList.append(myStudents[x].firstName + " " + myStudents[x].secondName)
-            menuList.append("Return to Menu")
-
-            studentChoice = Fun.RunMenu(menuList)
-
-            if studentChoice == len(menuList) - 1:
+            studentChoice = Fun.StudentSelectionMenu(myStudents, "------------Assign Students------------", "Which student would you like to assign to a class?")
+            
+            if studentChoice == len(myStudents) + 1:
                 continueLoop = False
             else:
 
