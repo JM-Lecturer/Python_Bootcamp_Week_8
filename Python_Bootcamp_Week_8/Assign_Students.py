@@ -42,7 +42,7 @@ def AssignStudents(myStudents, myClasses):
                 myClasses[subjectChoice].classStudents.append(myStudents[studentChoice - 1])
                 del myStudents[studentChoice - 1]
 
-                print("\n\nYou have successfully added " + myClasses[subjectChoice].classStudents[len(myClasses[subjectChoice - 1].classStudents) - 1].GetName() + " to the " + myClasses[subjectChoice - 1].className + " class!")
+                print("\n\nYou have successfully added " + myClasses[subjectChoice].classStudents[len(myClasses[subjectChoice - 1].classStudents) - 1].GetName() + " to the " + myClasses[subjectChoice].className + " class!")
                 input("[Press Enter to Continue]")
                     
                     
