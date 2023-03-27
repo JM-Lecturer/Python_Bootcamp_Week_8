@@ -8,7 +8,7 @@ class Students(): #Class template for student objects
     firstName = ""
     secondName = ""
     age = 0
-    Attendance = False
+    attendance = False
 
     def __init__(self, firstName, secondName, age): #Constructor used to initialize our student objects
 

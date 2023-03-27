@@ -47,7 +47,7 @@ def DisplayAllStudents(myStudents): #Function to display off students currently 
         print("\nName: " + myStudents[x].firstName + " " + myStudents[x].secondName)
         print("Age: " + str(myStudents[x].age))
 
-def DisplayStudentsBySubject(myClasses, SubjectIndex):
+def DisplayStudentsBySubject(myClasses, SubjectIndex, incAge):
 
     if len(myClasses[SubjectIndex].classStudents) == 0:
 
@@ -61,7 +61,15 @@ def DisplayStudentsBySubject(myClasses, SubjectIndex):
         for x in range(0, len(myClasses[SubjectIndex].classStudents)):
 
             print("\nName: " + myClasses[SubjectIndex].classStudents[x].GetName())
-            print("Age: " + str(myClasses[SubjectIndex].classStudents[x].age))
+
+            if incAge == True:
+
+                print("Age: " + str(myClasses[SubjectIndex].classStudents[x].age))
+
+            else:
+
+                print("Attended: " + str(myClasses[SubjectIndex].classStudents[x].attendance))
+
 
 def StudentSelectionMenu(myStudents, titleMsg, listMsg):
 

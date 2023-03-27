@@ -23,7 +23,7 @@ def AssignStudents(myStudents, myClasses):
         continueLoop = True
         while continueLoop == True:
     
-            Fun.DisplayStudentsBySubject(myClasses, subjectChoice)
+            Fun.DisplayStudentsBySubject(myClasses, subjectChoice, True)
             Fun.DisplayAllStudents(myStudents)
 
             studentChoice = Fun.StudentSelectionMenu(myStudents, "------------Assign Students------------", "Which student would you like to assign to a class?")
